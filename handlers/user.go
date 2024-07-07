@@ -29,7 +29,6 @@ func (s *Server) GetUser(ctx context.Context, req *pb.UserIDRequest) (*pb.UserRe
 			}, nil
 		}
 	}
-
 	return nil, errors.New("user not found")
 }
 
@@ -53,7 +52,6 @@ func (s *Server) GetUsers(ctx context.Context, req *pb.UserIDsRequest) (*pb.User
 			}
 		}
 	}
-
 	return &pb.UsersResponse{Users: users}, nil
 }
 
@@ -73,6 +71,5 @@ func (s *Server) SearchUsers(ctx context.Context, req *pb.SearchRequest) (*pb.Us
 			})
 		}
 	}
-
 	return &pb.UsersResponse{Users: users}, nil
 }
